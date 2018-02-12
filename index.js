@@ -1,6 +1,8 @@
 const server = require("http").Server();
 const port = process.env.PORT || 5000;
 
+alert('port is ' + port);
+
 var io = require("socket.io")(server);
 
 //this sends a message called joined
