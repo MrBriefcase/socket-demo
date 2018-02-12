@@ -6,9 +6,13 @@ var io = require('socket.io')(server);
 app.set('port', process.env.PORT || 5000);
 
 app.get('/', function (req, res) {
-  res.sendFile(__dirname + '/index.html');
+    res.sendFile(__dirname + '/index.html');
+    res.send('Port is: ' + hold);
 });
 
+
+var hold = app.get('port');
 server.listen(app.get('port'), function(){
     //success
+    console.log('Port is: ' + hold);
 });  
